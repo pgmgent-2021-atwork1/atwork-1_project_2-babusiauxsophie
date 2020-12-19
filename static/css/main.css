@@ -27,7 +27,7 @@ header {
   }
 }
 
-@media (min-width: 75rem) {
+@media (min-width: 82rem) {
   .master-wrapper {
     display: flex;
     justify-content: space-between;
@@ -40,14 +40,14 @@ header {
   display: none;
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 82rem) {
   .main-nav {
     display: flex;
     justify-content: flex-end;
     margin-right: 3rem;
     position: absolute;
-    left: 70%;
-    top: 14%;
+    right: -2%;
+    top: 10%;
   }
 }
 
@@ -105,7 +105,7 @@ header {
   background-color: inherit;
 }
 
-@media (min-width: 70rem) {
+@media (min-width: 82rem) {
   .burger {
     display: none;
   }
@@ -172,7 +172,6 @@ header {
   .search-container {
     display: flex;
     margin: 1rem;
-    margin-right: 6rem;
   }
 }
 
@@ -208,8 +207,8 @@ header {
 @media (min-width: 82rem) {
   .header-info {
     position: absolute;
-    top: 30%;
-    right: 10%;
+    top: 25%;
+    right: 14%;
     background-color: inherit;
     width: 12rem;
   }
@@ -335,12 +334,15 @@ header {
 @media (min-width: 82rem) {
   .header-info li:hover {
     background-color: rgb(0, 0, 0);
+    color: white;
   }
 }
 
 @media (min-width: 82rem) {
   .header-info a:hover {
     color: white;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -557,7 +559,7 @@ header {
 
 .subscribe-wrapper {
   padding: 1rem;
-  width: 90%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -580,6 +582,7 @@ header {
   .subscribe-card {
     margin-left: 20%;
     margin-right: 20%;
+    
   }
 }
 
@@ -595,11 +598,11 @@ header {
 }
 
 .subscribe-wrapper p {
-  font-size: 0.75rem;
+  font-size: 1.2rem;
 }
 
 .subscribe-card--form label {
-  font-size: 0.65rem;
+  font-size: 1.2rem;
 }
 
 .input1 {
