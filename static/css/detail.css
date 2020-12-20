@@ -114,3 +114,98 @@ header {
 .header-info a:hover {
   color: rgb(0, 0, 0);
 }
+
+/*css details */
+
+.detail-wrapper {
+  margin-top: 1rem;
+}
+
+@media(min-width:55rem) {
+  .detail-wrapper {
+    display: flex;
+  }
+ }
+
+.text-top h1 {
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+.text-top h2 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.text-middle{
+  margin-bottom: 2rem;
+}
+
+.details-more span {
+  font-weight: bold;
+  
+}
+
+
+
+.img-wrapper img {
+  padding: 1rem;
+  object-fit: cover;
+  object-position: center;
+  width: 90%;
+  height: 100%;
+  max-width: 30rem;
+}
+
+@media(min-width:55rem) {
+  .img-wrapper img {
+    width: 30rem;
+    height: 30rem;
+  }
+ }
+
+.text-wrapper {
+  padding: 1rem;
+}
+
+.more {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.more h2 {
+  padding-left: 2.5rem;
+}
+
+.more-events {
+  list-style: none;
+  width: 90%;
+}
+
+.more-events li {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.more-events a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.more-events a p:first-child{
+  font-weight: bold;
+}
+
+.more-events a p:nth-child(2){
+  font-weight: bold;
+}
+
+@media(min-width:50rem) {
+  .more-events a {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+}

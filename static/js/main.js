@@ -8,12 +8,12 @@
     const app = {
       initialize() {
         
-        this.openShoppingCart();
-        this.closeShoppingCart();
+        this.openBurgerMenu();
+        this.CloseBurgerMenu();
       },
   
   
-      openShoppingCart() {
+      openBurgerMenu() {
         burger.addEventListener("click", (ev) => {
           console.log("clicked");
   
@@ -21,7 +21,7 @@
         });
       },
   
-      closeShoppingCart() {
+      CloseBurgerMenu() {
         closeButton.addEventListener("click", (ev) => {
           menu.classList.remove("show-burger-nav");
         });

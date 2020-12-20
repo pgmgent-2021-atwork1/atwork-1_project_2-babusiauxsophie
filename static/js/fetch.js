@@ -42,6 +42,8 @@ const EVENTS_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
             })
         },
 
+        
+
         populateHTML() {
             console.log(this.categories);
             console.log(this.events);

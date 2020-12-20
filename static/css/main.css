@@ -177,6 +177,108 @@ button:focus {
   border: none;
 }
 
+/* css hightlights*/
+.events {
+  list-style: none;
+}
+
+.events__2 {
+  list-style: none;
+  
+}
+
+
+@media(min-width:55rem) {
+  .events {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+}
+
+@media(min-width:55rem) {
+  .events__2 {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding-top: 2rem;
+    
+  }
+}
+
+
+
+@media(min-width:55rem) {
+  .program {
+    width: 50%;
+  }
+ }
+
+ @media(min-width:80rem) {
+  .program {
+    width: 33%;
+  }
+ }
+
+ @media(min-width:100rem) {
+  .program {
+    width: 25%;
+  }
+ }
+
+.program a {
+  text-decoration: none; 
+}
+
+
+
+@media(min-width:55rem) {
+  .program a {
+    width: 25rem;
+    height: 15rem;
+  }
+ }
+
+.program a img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+@media(min-width:55rem) {
+  .program a img {
+    width: 25rem;
+    height: 15rem;
+  }
+ }
+
+.program-container {
+  padding-right: 2rem;
+}
+
+.program-date {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.5rem;
+  position: relative;
+  top: -1.2rem;
+  left: 1rem;
+}
+
+.program h3 {
+  font-size: 1.8rem;
+  color: black;
+  font-weight: 800;
+}
+
+.program p {
+  color: black;
+  font-size: 1.2rem;
+}
+
 /* css newsletter */
 
 .subscribe-wrapper {
