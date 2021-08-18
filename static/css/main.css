@@ -1,6 +1,12 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Raleway", sans-serif;
-  margin: 0;
+  margin: 0rem;
+  
 }
 
 a:focus {
@@ -126,7 +132,7 @@ button:focus {
   background-color: inherit;
   color: rgb(255, 255, 255);
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 1.5rem;
   position: absolute;
   right: 3%;
   top: 3%;
@@ -203,8 +209,11 @@ button:focus {
     list-style: none;
     padding-top: 2rem;
     
+    
   }
 }
+
+
 
 
 

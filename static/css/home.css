@@ -209,11 +209,12 @@ header {
   width: 100%;
 }
 
-@media (min-width: 42rem) {
+@media (min-width: 52rem) {
   .news-wrapper {
-    width: 60%;
+    width: 62%;
     margin-left: auto;
     margin-right: auto;
+    
   }
 }
 
@@ -272,18 +273,31 @@ header {
   font-weight: 400;
 }
 
+figure {
+  overflow: hidden;
+  padding-right: 1rem;
+  margin: 0;
+  padding: 1rem;
+}
+
+
 .news-card img {
   max-width: calc(94% - 2rem);
+  transition: transform 0.2s;
+}
+
+.news-card img:hover {
+  transform: scale(1.1);
 }
 
 @media (min-width: 42rem) {
   .news-card img {
-    max-width: 18rem;
+    max-width: 30rem;
   }
 }
 
 .news-card--right {
-  width: 50%;
+  padding: 1rem;
 }
 
 @media (min-width: 42rem) {
@@ -294,14 +308,23 @@ header {
   }
 }
 
+.news-card--right p {
+font-size: 1.2rem;
+}
+
 .news-date {
+  width: 4rem;
   position: absolute;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
-  font-weight: bold;
-  font-size: 0.8rem;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
+  
+}
+
+.news-date p {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 @media (min-width: 42rem) {
@@ -323,24 +346,42 @@ header {
   max-width: calc(100% - 0rem);
 }
 
+@media (min-width: 96rem) {
+  .picture img {
+    width: 58%;
+    padding-left: 25rem;
+    padding-right: 25rem;
+  }
+  }
+
 /* css twitter */
 
 .twitter-wrapper {
   margin-top: 4rem;
-  padding: 1rem;
+  padding: 1.5rem;
+  
 }
 
-@media (min-width: 32rem) {
+@media (min-width: 42rem) {
   .twitter-wrapper {
     display: flex;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
   }
 }
 
-@media (min-width: 32rem) {
+@media (min-width: 96rem) {
+  .twitter-wrapper {
+    padding-left: 25rem;
+    padding-right: 25rem;
+  }
+}
+
+
+
+
+@media (min-width: 42rem) {
   .twitter-card {
     width: 50%;
     padding: 1rem;
@@ -366,10 +407,13 @@ header {
 .twitter-info p {
   font-size: 0.75rem;
   font-weight: normal;
+  
 }
 
 @media (min-width: 52rem) {
   .twitter-info p {
     padding-top: 1rem;
+    
   }
 }
+

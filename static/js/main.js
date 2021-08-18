@@ -4,6 +4,8 @@
   const menu = document.querySelector(".burger-nav");
   const closeButton = document.querySelector(".close-burger-nav");
   
+  
+
   (() => {
     const app = {
       initialize() {
