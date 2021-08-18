@@ -4,9 +4,8 @@ const EVENTS_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
 
     const API = {
 
-        initialize() {
+        initialize() { 
             this.$container = document.getElementById('container');
-            this.$eventContainer = document.querySelector('.event-container');
             this.fetchEvents();
             
             
@@ -18,7 +17,7 @@ const EVENTS_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
             .then((json) => {
                 this.events =json;
                 console.log(json);
-               /* this.filterEventSlug(); */
+               //this.filterEventSlug();
                 this.populateHTML();
             })
             .catch((e) => console.log(e));
@@ -33,14 +32,12 @@ const EVENTS_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
         filterByDay() {
             const day = this.getSearch().get('day');
             const filteredEvents = this.events.filter(event => event.day === day);
-            console.log(filteredEvents);
             return filteredEvents;
         },
 
         filterEventSlug() {
             const slug = this.getSearch().get('slug');
-            const filteredEventsBySlug = this.filterByDay().filter(event => event.slug === slug);
-            console.log(filteredEventsBySlug);
+            const filteredEventsBySlug = this.filterByDay().find(event => event.slug === slug);
             return filteredEventsBySlug;
             
         },
@@ -48,10 +45,8 @@ const EVENTS_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
         populateHTML(){
             
             console.log(this.events);
-
-            const eventDetail = this.filterEventSlug().map((event => {
-
-                return `
+            const event = this.filterEventSlug();
+            const eventDetail = `
                     <div class="detail-wrapper">
                         <div class="img-wrapper">
                             <img class="program-image"src="${event.image !== null ? event.image.thumb : 'static/media/sloganGent.jpg'}" alt="Foto ${event.title}" loading="lazy" >
@@ -63,23 +58,21 @@ const EVENTS_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
                             <h2>${event.day_of_week} ${event.day} - ${event.start} > ${event.end}</h2>
                         </div>
                         <div class="text-middle">
-                        <p>${event.description !== undefined ? eventDetail.description : `Geen beschrijving gevonden.`}</p>
+                        <p>${event.description  ? event.description : `Geen beschrijving gevonden.`}</p>
                         </div>
                            
                         <div class="details-more">
-                            <p><span>website:</span> ${event.url}</p>
+                            <p><span>website:</span> ${event.url ? event.url : `Geen website gevonden.` }</p>
                             <p><span>organisator:</span> ${event.organizer}</p>
-                            <p><span>categorieën:</span> ${event.categrory}</p>  
+                            <p><span>categorieën:</span> ${event.category}</p>  
                         </div>
                         
                         </div>
                     </div>
                                     
                     `;
-            }
-            )).join('');
-
-            document.querySelector('.container').innerHTML = eventDetail;
+            
+            this.$container.innerHTML = eventDetail;
            
 
         },
