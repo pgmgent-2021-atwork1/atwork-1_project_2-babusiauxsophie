@@ -63,8 +63,8 @@ const EVENTS_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
                            
                         <div class="details-more">
                             <p><span>website:</span> ${event.url ? event.url : `Geen website gevonden.` }</p>
-                            <p><span>organisator:</span> ${event.organizer}</p>
-                            <p><span>categorieën:</span> ${event.category}</p>  
+                            <p><span>organisator:</span> ${event.organizer ? event.organizer : `Geen organisator gevonden.` }</p>
+                            <p><span>categorieën:</span> ${event.category ? event.category : `Geen categorie gevonden.`}</p>  
                         </div>
                         
                         </div>
