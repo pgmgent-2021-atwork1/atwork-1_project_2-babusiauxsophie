@@ -7,7 +7,11 @@
   const dropdown = document.querySelector(".dropdown");
   const dropdownMenu = document.querySelector(".dropdown-menu");
   const dropdownArrow = document.querySelector(".dropdown-arrow");
-  
+  const gridButton = document.querySelector("#grid-button");
+  const listButton = document.querySelector("#list-button");
+  // const eventsContainer = document.getElementsByClassName("events-container");
+  // const container = document.querySelector("#container");
+  // const eventsImg = document.getElementsByClassName("events-img-wrapper");
   
   const imgArray = [
     'banner1',
@@ -26,6 +30,7 @@
         this.openBurgerMenu();
         this.closeBurgerMenu();
         this.showProgram();
+        // this.changeLayoutEvent();
       },
   
   
@@ -57,12 +62,21 @@
           } else {
             dropdownMenu.classList.remove("show-dropdown-menu");
             dropdownArrow.classList.remove("rotate-arrow"); 
-
           }
-
         })
       },
-      
+      // changeLayoutEvent() {
+      //   // Click button to change layout
+      //   ???????
+      //   listButton.addEventListener("click", (ev) => {
+      //     console.log(eventsContainer)
+      //     .forEach(element => {
+      //       console.log(element.index);
+      //     })
+      //   })
+        
+        
+      // }
     };
     app.initialize();
   })();

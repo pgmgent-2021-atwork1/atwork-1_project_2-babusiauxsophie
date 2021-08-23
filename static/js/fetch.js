@@ -69,10 +69,10 @@ const EVENTS_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
 
         getEventHTML(event) {
             return `
-                    <li class="program"> 
+                    <li class="program events-container"> 
                                     <a href="/app/detail.html?day=${event.day}&slug=${event.slug}">
                                     <div class="program-container">
-                                        <div class="img-wrapper">
+                                        <div class="img-wrapper events-img-wrapper">
                                             <img src="${event.image !== null ? event.image.thumb : 'static/media/sloganGent.jpg'}" alt="Foto ${event.title}" loading="lazy" >
                                         </div>
                                         <span class="program-date">${(event.day_of_week).substring(0, 2)} ${event.start} u.</span>

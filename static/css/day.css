@@ -421,6 +421,8 @@ header {
   }
  }
 
+
+
 .program-container {
   padding-right: 2rem;
 }
@@ -533,4 +535,47 @@ header {
 
 .img-wrapper img:hover{
   transform: scale(1.2);
+}
+
+
+.change-layout {
+  width: 90%;
+  color: rgb(255, 255, 255);
+  padding: 0;
+  margin: 1rem;
+}
+
+.change-layout a {
+  /* background-color: rgb(0, 0, 0); */
+  width: 100%;
+  height: 100%;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+ background-color: rgb(0, 0, 0);
+}
+
+.change-layout .program-date {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+
+.change-layout p, .change-layout h3 {
+  color: rgb(255, 255, 255);
+ background-color: rgb(0, 0, 0);
+}
+
+.change-layout p {
+  padding-right: 2rem;
+}
+
+.change-layout h3 {
+  flex: 2;
+}
+
+.hide-img {
+  display: none;
 }
