@@ -15,7 +15,7 @@ const EVENTS_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
             fetch(CATEGORY_URL)
             .then((response) => response.json())
             .then((json) => {
-                console.log(json);
+                
                 this.categories = json;
                 this.fetchEvents();
             })
@@ -27,29 +27,17 @@ const EVENTS_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
             .then((response) => response.json())
             .then((json) => {
                 this.events =json;
-                console.log(json);
+                
                 this.filterEventsPerDay();
                 
                 this.threeRandomEvents = this.getThreeRandomEvents(this.events);
                 this.populateHTML();
                 
                 
-                console.log(this.threeRandomEvents);
+                
             })
             .catch((e) => console.log(e));
         },
-
-        // getThreeRandomEvents(events) {
-        //     const maxArrayId = events.length - 1;
-        //     const threeRandomIntegers = [];
-        //     for (let i = 0; i < 3; i++) {
-        //         const randomNrToAdd = Math.floor(Math.random() * maxArrayId);
-        //         threeRandomIntegers.push(randomNrToAdd);
-
-        //         const randomEvent = events[randomNrToAdd];
-        //     }
-        //     return events.filter(event => threeRandomIntegers.includes(indexOf(event)))
-        // },
 
         getThreeRandomEvents(events) { 
             const maxArrayId = events.length - 1;
@@ -84,8 +72,8 @@ const EVENTS_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
                     <li class="program"> 
                                     <a href="/app/detail.html?day=${event.day}&slug=${event.slug}">
                                     <div class="program-container">
-                                        <div class="program-image-wrapper">
-                                            <img class="program-image"src="${event.image !== null ? event.image.thumb : 'static/media/sloganGent.jpg'}" alt="Foto ${event.title}" loading="lazy" >
+                                        <div class="img-wrapper">
+                                            <img src="${event.image !== null ? event.image.thumb : 'static/media/sloganGent.jpg'}" alt="Foto ${event.title}" loading="lazy" >
                                         </div>
                                         <span class="program-date">${(event.day_of_week).substring(0, 2)} ${event.start} u.</span>
                                     </div>

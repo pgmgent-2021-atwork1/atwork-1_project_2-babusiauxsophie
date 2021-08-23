@@ -107,14 +107,16 @@ button:focus {
   transform: translateX(100%);
 }
 
-.burger-nav ul {
+.burger-nav>ul {
   display: block;
   font-weight: bold;
   list-style: none;
+  
 }
 
 .burger-nav li {
   padding: 1rem;
+  
 }
 
 .burger-nav a {
@@ -125,6 +127,49 @@ button:focus {
 
 .burger-nav a:hover {
   text-decoration: underline;
+}
+
+.dropdown {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0;
+  
+}
+
+.dropdown:hover {
+  text-decoration: underline;
+}
+
+.dropdown-arrow {
+  margin-left: 1rem;
+  transform: rotate(0);
+  transition: 0.1s ease-in-out;
+}
+
+.rotate-arrow {
+  transform: rotate(180deg);
+  
+}
+
+.dropdown-menu {
+  display: none;
+  border-left: 5px solid rgb(255, 255, 255);
+  
+  
+}
+
+
+.show-dropdown-menu {
+  display: block;
+  
 }
 
 .close-burger-nav {
@@ -352,6 +397,8 @@ button:focus {
 .input-wrapper {
   width: 100%;
 }
+
+
 
 /* css footer */
 footer {

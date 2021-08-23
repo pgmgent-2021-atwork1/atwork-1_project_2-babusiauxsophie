@@ -17,7 +17,6 @@ const EVENTS_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
             .then((json) => {
                 this.events =json;
                 console.log(json);
-               //this.filterEventSlug();
                 this.populateHTML();
             })
             .catch((e) => console.log(e));

@@ -1,6 +1,5 @@
 header {
   height: 70vh;
-  background-image: url(../media/banner1.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 25% 50%;
@@ -224,6 +223,7 @@ header {
   font-size: 0.75rem;
 }
 
+
 .news-more {
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
@@ -273,22 +273,19 @@ header {
   font-weight: 400;
 }
 
-figure {
+.news-img-wrapper {
   overflow: hidden;
-  padding-right: 1rem;
-  margin: 0;
-  padding: 1rem;
 }
 
-
-.news-card img {
-  max-width: calc(94% - 2rem);
-  transition: transform 0.2s;
+.news-img-wrapper img {
+  transform: scale(1);
+  transition: ease-in-out 0.2s;
 }
 
-.news-card img:hover {
-  transform: scale(1.1);
+.news-img-wrapper img:hover{
+  transform: scale(1.2);
 }
+
 
 @media (min-width: 42rem) {
   .news-card img {
