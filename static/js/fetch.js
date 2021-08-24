@@ -49,10 +49,6 @@ const EVENTS_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
             return randomEvents;
         },
 
-
-        
-
-
         filterEventsPerDay () {
             const search = window.location.search;
             const params = new URLSearchParams(search);
@@ -64,8 +60,6 @@ const EVENTS_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
             }
             
         },
-
-        
 
         getEventHTML(event) {
             return `
@@ -120,26 +114,16 @@ const EVENTS_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
             
         },
 
-
         populateHTML() {
             
             if(this.$container) {
                 this.$container.innerHTML = this.getCategoryAndEventsHTML();
             }
-            
-             
-
-             const randomEvents = document.querySelector(".events__2");
+            const randomEvents = document.querySelector(".events__2");
              randomEvents.innerHTML = this.threeRandomEvents.map((event) => {
                  return this.getEventHTML(event);
-             });
-
-             
-        },
-
-        
+             });    
+        },   
     }
-
     API.initialize();
-
 })();

@@ -6,9 +6,7 @@ const EVENTS_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
 
         initialize() { 
             this.$container = document.getElementById('container');
-            this.fetchEvents();
-            
-            
+            this.fetchEvents();  
         },
 
         fetchEvents() {
@@ -42,7 +40,6 @@ const EVENTS_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
         },
 
         populateHTML(){
-            
             console.log(this.events);
             const event = this.filterEventSlug();
             const eventDetail = `
@@ -72,13 +69,7 @@ const EVENTS_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
                     `;
             
             this.$container.innerHTML = eventDetail;
-           
-
         },
-        
-
-
     }
     API.initialize();
-
 })();

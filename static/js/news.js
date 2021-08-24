@@ -30,10 +30,7 @@ const NEWS_URL = "https://www.pgm.gent/data/gentsefeesten/news.json";
             }).join('');
             console.log(html)
             this.$container.innerHTML = html;
-
-        }
-
-        
+        }   
     }
     API.initialize();
 })();

@@ -1,5 +1,3 @@
-
-  
   const burger = document.querySelector(".burger");
   const menu = document.querySelector(".burger-nav");
   const closeButton = document.querySelector(".close-burger-nav");
@@ -9,9 +7,9 @@
   const dropdownArrow = document.querySelector(".dropdown-arrow");
   const gridButton = document.querySelector("#grid-button");
   const listButton = document.querySelector("#list-button");
-  // const eventsContainer = document.getElementsByClassName("events-container");
-  // const container = document.querySelector("#container");
-  // const eventsImg = document.getElementsByClassName("events-img-wrapper");
+  const eventsContainer = document.getElementsByClassName("events-container");
+  const container = document.querySelector("#container");
+  const eventsImg = document.getElementsByClassName("events-img-wrapper");
   
   const imgArray = [
     'banner1',
@@ -30,7 +28,7 @@
         this.openBurgerMenu();
         this.closeBurgerMenu();
         this.showProgram();
-        // this.changeLayoutEvent();
+        this.changeLayoutEvent();
       },
   
   
@@ -65,19 +63,29 @@
           }
         })
       },
-      // changeLayoutEvent() {
-      //   // Click button to change layout
-      //   ???????
-      //   listButton.addEventListener("click", (ev) => {
-      //     console.log(eventsContainer)
-      //     .forEach(element => {
-      //       console.log(element.index);
-      //     })
-      //   })
-        
-        
-      // }
-    };
+      
+      changeLayoutEvent() {
+        if(listButton) {
+          listButton.addEventListener("click", (ev) => {
+            for (let i = 0; i < eventsContainer.length; i++) {
+              eventsContainer[i].classList.add('change-layout');
+            }
+            for (let i = 0; i < eventsImg.length; i++) {
+              eventsImg[i].classList.add('hide-img');
+            }
+          });
+          gridButton.addEventListener("click", (ev) => {
+            for (let i = 0; i < eventsContainer.length; i++) {
+              eventsContainer[i].classList.remove('change-layout');
+            }
+            for (let i = 0; i < eventsImg.length; i++) {
+              eventsImg[i].classList.remove('hide-img');
+            }
+          });
+        }
+      }
+      
+    }
     app.initialize();
   })();
   

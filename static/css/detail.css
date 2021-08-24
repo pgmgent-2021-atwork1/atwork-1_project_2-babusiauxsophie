@@ -41,7 +41,7 @@ header {
     top: 50%;
   }
 }
- 
+
 .svg-1 {
   width: auto;
   padding-bottom: 0.5rem;
@@ -90,12 +90,11 @@ header {
   }
 }
 
-
 .header-info li:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
 }
- 
+
 .header-info li span {
   font-weight: bold;
   font-size: 0.9rem;
@@ -121,11 +120,11 @@ header {
   margin-top: 1rem;
 }
 
-@media(min-width:55rem) {
+@media (min-width: 55rem) {
   .detail-wrapper {
     display: flex;
   }
- }
+}
 
 .text-top h1 {
   font-weight: 800;
@@ -137,16 +136,13 @@ header {
   font-size: 2rem;
 }
 
-.text-middle{
+.text-middle {
   margin-bottom: 2rem;
 }
 
 .details-more span {
   font-weight: bold;
-  
 }
-
-
 
 .img-wrapper img {
   padding: 1rem;
@@ -157,12 +153,12 @@ header {
   max-width: 30rem;
 }
 
-@media(min-width:55rem) {
+@media (min-width: 55rem) {
   .img-wrapper img {
     width: 30rem;
     height: 30rem;
   }
- }
+}
 
 .text-wrapper {
   padding: 1rem;
@@ -179,7 +175,7 @@ header {
 
 .more-events {
   list-style: none;
-  width: 90%;
+  width: 96%;
 }
 
 .more-events li {
@@ -194,18 +190,21 @@ header {
   text-decoration: none;
 }
 
-.more-events a p:first-child{
+.more-events a p:first-child {
   font-weight: bold;
 }
 
-.more-events a p:nth-child(2){
+.more-events a p:nth-child(2) {
   font-weight: bold;
 }
 
-@media(min-width:50rem) {
+@media (min-width: 50rem) {
   .more-events a {
     display: flex;
     justify-content: space-between;
-    
   }
+}
+
+.img-wrapper {
+  padding-left: 1.8rem;
 }
