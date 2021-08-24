@@ -144,6 +144,12 @@ header {
   font-weight: bold;
 }
 
+.details-more p:hover {
+  text-decoration-color: rgb(160, 158, 158);
+  text-decoration-line: underline;
+  
+}
+
 .img-wrapper img {
   padding: 1rem;
   object-fit: cover;
